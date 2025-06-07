@@ -64,10 +64,10 @@ O curso está dividido em 5 dias, com cada dia focando em tópicos específicos:
 
 ### Dia 5: Hooks Avançados e Integração com APIs
 
-- **Introdução ao `useEffect`**
-  - Gerenciamento do ciclo de vida dos componentes e efeitos colaterais.
 - **Outros Hooks Básicos**
   - Breve visão sobre `useRef` e, se o tempo permitir, introdução ao `useContext`.
+- **Introdução ao `useEffect`**
+  - Gerenciamento do ciclo de vida dos componentes e efeitos colaterais.
 - **Navegação com React Router**
   - Conceitos básicos para criar rotas e navegação entre páginas.
 - **Integração com APIs**

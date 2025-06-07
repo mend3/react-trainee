@@ -7,7 +7,20 @@ import { Login } from "./componentes/Login";
 import { useAuthContext } from "./state/AuthContext";
 
 function App() {
+
+
   const authContext = useAuthContext();
+  const [src, setSrc] = React.useState('https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Google_Images_2015_logo.svg/250px-Google_Images_2015_logo.svg.png');
+
+  React.useEffect(() => {
+    fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+      .then((resposta) => resposta.json())
+      .then((pokemonInfo) => {
+        const imagem = pokemonInfo.sprites.front_shiny;
+        setSrc(imagem)
+        console.log({imagem})
+      });
+  });
 
   let nome = "";
   if (authContext.isLogado) {
@@ -29,6 +42,7 @@ function App() {
           Aqui você pode controlar seus gastos, lançar transações e visualizar o
           saldo atualizado das suas contas.
         </p>
+        <img src={src} />
         <AccountsList />
         <AccountForm account={null} />
         <AddCardForm />
